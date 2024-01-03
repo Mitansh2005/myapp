@@ -13,7 +13,9 @@ class daily_log(models.Model):
   Sell_rate=models.FloatField()
   Sell_quantity=models.IntegerField()
   Sell_amount=models.FloatField(default="",null=False,editable=False)
+  Net_quantity=models.IntegerField(default=0,null=False,editable=False)
   Net_pl=models.FloatField(default=0.0,null=False,editable=False)
+
   
   
   
@@ -23,6 +25,7 @@ class daily_log(models.Model):
     self.Buy_amount=self.Buy_rate*self.Buy_quantity
     self.Sell_amount=self.Sell_rate*self.Sell_quantity
     self.Net_pl=self.Sell_amount-self.Buy_amount
+    self.Net_quantity=self.Buy_quantity-self.Sell_quantity
     
     super().save(*args,**kwargs)
   # def __str__(self):

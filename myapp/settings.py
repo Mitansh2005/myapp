@@ -25,7 +25,7 @@ SECRET_KEY = 'e7w06ajcpq94d0$kt5l+0!@71#!_u!9-2u4f!9qez_4znv%jb9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -78,9 +78,13 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'aCaA*bFgb532-*Gbd6g15D4a363gb26e',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '49896',
+    } 
 }
 
 
@@ -123,7 +127,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 import os
 STATICFILES_DIRS=[
-  F'{BASE_DIR}/static',
-  os.path.join(BASE_DIR,'static')
+  F'{BASE_DIR}/static'
 ]
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build' ,'static')
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
