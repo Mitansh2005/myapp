@@ -13,7 +13,7 @@ class daily_log(models.Model):
   Sell_rate=models.FloatField()
   Sell_quantity=models.IntegerField()
   Sell_amount=models.FloatField(default="",null=False,editable=False)
-  Net_quantity=models.IntegerField(default=0,null=False,editable=False)
+  Net_quantity=models.IntegerField(default="",null=False,editable=False)
   Net_pl=models.FloatField(default=0.0,null=False,editable=False)
 
   
