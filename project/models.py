@@ -24,7 +24,7 @@ class daily_log(models.Model):
   def save(self,*args, **kwargs):
     self.Buy_amount=self.Buy_rate*self.Buy_quantity
     self.Sell_amount=self.Sell_rate*self.Sell_quantity
-    self.Net_pl=self.Sell_amount-self.Buy_amount
+    self.Net_pl=(self.Sell_quantity*self.Sell_rate)-(self.Sell_quantity*self.Buy_rate)
     self.Net_quantity=self.Buy_quantity-self.Sell_quantity
     
     super().save(*args,**kwargs)
