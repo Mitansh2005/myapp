@@ -3,6 +3,6 @@ from .models import daily_log
 # Register your models here.
 
 class daily_logAdmin(admin.ModelAdmin):
-  list_display= ('id','Script_name','Client_name','Client_code','Buy_date','Buy_rate','Buy_quantity','Buy_amount','Sell_date','Sell_rate','Sell_quantity','Sell_amount','Net_quantity','Net_pl')
-  list_filter=('id','Buy_date','Sell_date','Client_code')
+  list_display= ('Id','Script_Name','Client_Name','Client_Code','Buy_Date','Buy_Rate','Buy_Quantity','Buy_Amount','Sell_Date','Sell_Rate','Sell_Quantity','Sell_Amount','Net_Quantity','Net_Pl')
+  list_filter=('Id','Buy_Date','Sell_Date','Client_Code')
 admin.site.register(daily_log,daily_logAdmin)

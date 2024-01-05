@@ -1,31 +1,31 @@
 from django.db import models
 
 class daily_log(models.Model):
-  id=models.AutoField(primary_key=True)
-  Script_name=models.CharField(max_length=256)
-  Client_name=models.CharField(max_length=256)
-  Client_code=models.CharField(max_length=8)
-  Buy_date=models.DateField()
-  Buy_rate=models.FloatField()
-  Buy_quantity=models.IntegerField()
-  Buy_amount=models.FloatField(default="",null=False,editable=False)
-  Sell_date=models.DateField()
-  Sell_rate=models.FloatField()
-  Sell_quantity=models.IntegerField()
-  Sell_amount=models.FloatField(default="",null=False,editable=False)
-  Net_quantity=models.IntegerField(default="",null=False,editable=False)
-  Net_pl=models.FloatField(default=0.0,null=False,editable=False)
+  Id=models.AutoField(primary_key=True)
+  Script_Name=models.CharField(max_length=256)
+  Client_Name=models.CharField(max_length=256)
+  Client_Code=models.CharField(max_length=8)
+  Buy_Date=models.DateField()
+  Buy_Rate=models.FloatField()
+  Buy_Quantity=models.IntegerField()
+  Buy_Amount=models.FloatField(default="",null=False,editable=False)
+  Sell_Date=models.DateField()
+  Sell_Rate=models.FloatField()
+  Sell_Quantity=models.IntegerField()
+  Sell_Amount=models.FloatField(default="",null=False,editable=False)
+  Net_Quantity=models.IntegerField(default="",null=False,editable=False)
+  Net_Pl=models.FloatField(default=0.0,null=False,editable=False)
 
   
   
   
   class Meta:
-    ordering=['id']
+    ordering=['Id']
   def save(self,*args, **kwargs):
-    self.Buy_amount=self.Buy_rate*self.Buy_quantity
-    self.Sell_amount=self.Sell_rate*self.Sell_quantity
-    self.Net_pl=(self.Sell_quantity*self.Sell_rate)-(self.Sell_quantity*self.Buy_rate)
-    self.Net_quantity=self.Buy_quantity-self.Sell_quantity
+    self.Buy_Amount=self.Buy_Rate*self.Buy_Quantity
+    self.Sell_Amount=self.Sell_Rate*self.Sell_Quantity
+    self.Net_Pl=(self.Sell_Quantity*self.Sell_Rate)-(self.Sell_Quantity*self.Buy_Rate)
+    self.Net_Quantity=self.Buy_Quantity-self.Sell_Quantity
     
     super().save(*args,**kwargs)
   # def __str__(self):

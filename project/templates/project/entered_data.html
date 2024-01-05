@@ -2,7 +2,7 @@
 {%load static%}
 {%block page_title%}Data{%endblock%}
 {%block css_files%}
-<link rel="stylesheet" href='{% static "project/entered_data.css" %}'>
+<link rel="stylesheet" href='{% static "project/entered_Data.css" %}'>
 {%endblock%}
 {%block content%}
 <table>
@@ -26,20 +26,20 @@
   
     {%for scripts in account%}
     <tr>
-    <td>{{scripts.id}}</td>
-    <td>{{scripts.Script_name}}</td>
-    <td>{{scripts.Client_name}}</td>
-    <td>{{scripts.Client_code}}</td>
-    <td>{{scripts.Buy_date}}</td>
-    <td>{{scripts.Buy_rate}}</td>
-    <td>{{scripts.Buy_quantity}}</td>
-    <td>{{scripts.Buy_amount}}</td>
-    <td>{{scripts.Sell_date}}</td>
-    <td>{{scripts.Sell_rate}}</td>
-    <td>{{scripts.Sell_quantity}}</td>
-    <td>{{scripts.Sell_amount}}</td>
-    <td>{{scripts.Net_quantity}}</td>
-    <td>{{scripts.Net_pl}}</td>
+    <td>{{scripts.Id}}</td>
+    <td>{{scripts.Script_Name}}</td>
+    <td>{{scripts.Client_Name}}</td>
+    <td>{{scripts.Client_Code}}</td>
+    <td>{{scripts.Buy_Date}}</td>
+    <td>{{scripts.Buy_Rate}}</td>
+    <td>{{scripts.Buy_Quantity}}</td>
+    <td>{{scripts.Buy_Amount}}</td>
+    <td>{{scripts.Sell_Date}}</td>
+    <td>{{scripts.Sell_Rate}}</td>
+    <td>{{scripts.Sell_Quantity}}</td>
+    <td>{{scripts.Sell_Amount}}</td>
+    <td>{{scripts.Net_Quantity}}</td>
+    <td>{{scripts.Net_Pl}}</td>
    
   </tr>
     {%endfor%}
