@@ -9,18 +9,21 @@ class daily_log(models.Model):
   Buy_Rate=models.FloatField()
   Buy_Quantity=models.IntegerField()
   Buy_Amount=models.FloatField(default="",null=False,editable=False)
-  Sell_Date=models.DateField(null=True)
-  Sell_Rate=models.FloatField(null=True)
-  Sell_Quantity=models.IntegerField(null=True)
-  Sell_Amount=models.FloatField(default="",null=True,editable=False)
+  Sell_Date=models.DateField(default="",null=True)
+  Sell_Rate=models.FloatField(default="0",null=True)
+  Sell_Quantity=models.IntegerField(default="0",null=True)
+  Sell_Amount=models.FloatField(default="0",null=True,editable=False)
   Net_Quantity=models.IntegerField(default="",null=False,editable=False)
   Net_Pl=models.FloatField(default=0.0,null=False,editable=False)
 
-  
-  
-  
   class Meta:
     ordering=['Id']
+
+  def __init__(self, *args, **kwargs):
+    super(daily_log, self).__init__(*args, **kwargs)
+    self.fields['Sell_Date','Sell_Rate','Sell_Quantity','Sell_Amount'].required = False
+  
+  
   def save(self,*args, **kwargs):
     self.Buy_Amount=self.Buy_Rate*self.Buy_Quantity
     self.Sell_Amount=self.Sell_Rate*self.Sell_Quantity
