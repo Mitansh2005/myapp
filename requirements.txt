@@ -4,9 +4,11 @@ diff-match-patch==20230430
 Django==5.0.1
 django-import-export==3.3.5
 et-xmlfile==1.1.0
+gunicorn==21.2.0
 MarkupPy==1.14
 odfpy==1.4.1
 openpyxl==3.1.2
+packaging==23.2
 psycopg2==2.9.9
 psycopg2-binary==2.9.9
 PyYAML==6.0.1
