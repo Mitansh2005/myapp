@@ -21,7 +21,10 @@ class daily_log(models.Model):
 
   def __init__(self, *args, **kwargs):
     super(daily_log, self).__init__(*args, **kwargs)
-    self.fields['Sell_Date','Sell_Rate','Sell_Quantity','Sell_Amount'].required = False
+    self.Sell_Date.required=False
+    self.Sell_Rate.required=False
+    self.Sell_Quantity.required=False
+    self.Sell_Amount.required=False
   
   
   def save(self,*args, **kwargs):
