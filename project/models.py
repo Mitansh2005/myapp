@@ -30,3 +30,4 @@ class daily_log(models.Model):
     super().save(*args,**kwargs)
   # def __str__(self):
   #   return f'{self.id} {self.Script_name} {self.Client_name} {self.Client_code} {self.Buy_date} {self.Buy_rate} {self.Buy_quantity} {self.Buy_amount} {self.Sell_date} {self.Sell_rate} {self.Sell_quantity} {self.Sell_amount}  '
+

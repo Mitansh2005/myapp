@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{%load static %}
+{% block  page_title %}Home Page{% endblock %}
+{%block css_files%}
+<link rel="stylesheet" href="{% static "project/index.css" %}">
+{%endblock%}
+{%block content%}
+<div class="entire-div">
+  <div class="content">
+<div class="card">
+  <div class="buttons-holder">
+    <a href={%url 'data-page'%}>
+  <button class="Client_Log">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+    </svg>
+    <div class="text">
+     Client Log
+  
+    </div>
+  </button>
+</a>
+<a class="upload-link" href={%url 'upload-page'%}>
+  <button class="Upload_Excel">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+    </svg>
+    <div class="text">
+       Upload File
+    </div>
+  </button>
+</a>
+</div>
+</div>
+  </div>
+</div>
+<script scr={% static "filter.js" %}></script>
+{%endblock%}

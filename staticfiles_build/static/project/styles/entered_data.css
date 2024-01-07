@@ -1,6 +1,4 @@
-*{
-  margin: 0;
-}
+
 html{
 font-family: 'roboto';
   font-weight: bold;
@@ -8,17 +6,16 @@ font-family: 'roboto';
 table {
   border-collapse: collapse;
   width: 100%;
-  margin-top: 2vh;
 }
 
 th, td {
-  border: 1px solid #0C8346;
+  border: 1px solid #FCD581;
   padding: 8px;
   text-align: left;
 }
 
 th {
-  background-color: #8FD5A6;
+  background-color: #FFF8E8;
 }
 
 td input {

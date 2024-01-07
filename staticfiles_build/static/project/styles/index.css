@@ -1,0 +1,80 @@
+html{
+  font-family: 'roboto';
+  font-weight: bold;
+  font-size: large;
+}
+body {
+  --dot-bg: rgb(255, 255, 255);
+  --dot-color: #0C8346;
+  --dot-size: 1px;
+  --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+}
+*{
+  margin: 0;
+}
+.head{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #329F5B;
+  padding: 2vh;
+}
+
+svg{
+  margin-right: 2vh;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25vh;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vh;
+  height: 40vh;
+  border-radius: 50px;
+  background: #8FD5A6;
+  box-shadow: 20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
+ }
+
+ .Client_Log,.Upload_Excel,.View_Upload {
+  display: block;
+  margin: 5vh;
+  background-color: #ffffff00;
+  color: #fff;
+  width: 20vh;
+  height: 6vh;
+  border: #0D5D56 0.2em solid;
+  border-radius: 11px;
+  text-align: right;
+  transition: all 0.6s ease;
+}
+
+.Client_Log:hover,.Upload_Excel:hover,.View_Upload:hover {
+  background-color: #0D5D56;
+  cursor: pointer;
+}
+
+.Client_Log svg,.Upload_Excel svg,.View_Upload svg {
+  width: 1.6em;
+  margin: -0.2em 0.8em 1em;
+  position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.Client_Log:hover,.Upload_Excel:hover,.View_Upload:hover svg {
+  transform: translateX(5px);
+}
+
+.text {
+  text-align: center;
+  margin: 0 1.5em
+}

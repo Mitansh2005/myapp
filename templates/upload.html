@@ -1,0 +1,20 @@
+{%extends 'base.html' %}
+{%load static%}
+{% block page_title %}Upload Document{% endblock %}
+{%block css_files%}
+<link rel="stylesheet" href="{% static "project/upload.css" %}">
+  {%endblock%}
+{%block content%}
+<div class='entire'>
+<div class="box">
+  <span></span>
+  <div class="content">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="myfile">
+      <button class="btn" type="submit">Upload</button>
+    </form>
+  </div>
+</div>
+</div>
+{%endblock%}

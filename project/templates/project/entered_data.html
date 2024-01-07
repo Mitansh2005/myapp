@@ -2,7 +2,10 @@
 {%load static%}
 {%block page_title%}Data{%endblock%}
 {%block css_files%}
-<link rel="stylesheet" href='{% static "project/entered_Data.css" %}'>
+<link rel="stylesheet" href='{% static "project/entered_data.css" %}'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bungee+Spice&family=Raleway:wght@800&display=swap" rel="stylesheet">
 {%endblock%}
 {%block content%}
 <table>
@@ -33,11 +36,11 @@
     <td>{{scripts.Buy_Date}}</td>
     <td>{{scripts.Buy_Rate}}</td>
     <td>{{scripts.Buy_Quantity}}</td>
-    <td>{{scripts.Buy_Amount}}</td>
+    <td>{{scripts.Buy_Amount|floatformat:4}}</td>
     <td>{{scripts.Sell_Date}}</td>
     <td>{{scripts.Sell_Rate}}</td>
     <td>{{scripts.Sell_Quantity}}</td>
-    <td>{{scripts.Sell_Amount}}</td>
+    <td>{{scripts.Sell_Amount|floatformat:4}}</td>
     <td>{{scripts.Net_Quantity}}</td>
     <td>{{scripts.Net_Pl}}</td>
    
