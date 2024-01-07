@@ -21,7 +21,6 @@ class daily_log(models.Model):
 
   def __init__(self, *args, **kwargs):
     super(daily_log, self).__init__(*args, **kwargs)
-    self.Sell_Date.required=False
     self.Sell_Rate.required=False
     self.Sell_Quantity.required=False
     self.Sell_Amount.required=False
