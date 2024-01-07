@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from .models import daily_log
 from .resources import daily_logResource
 from django.contrib import messages
