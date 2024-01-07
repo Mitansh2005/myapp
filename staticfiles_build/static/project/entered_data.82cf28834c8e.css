@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+}
+html{
+font-family: 'roboto';
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 2vh;
+}
+
+th, td {
+  border: 1px solid #0C8346;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #8FD5A6;
+}
+
+td input {
+  width: 100%;
+  box-sizing: border-box;
+}

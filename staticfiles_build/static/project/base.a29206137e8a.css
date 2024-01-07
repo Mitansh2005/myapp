@@ -1,0 +1,41 @@
+.nav-bar{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  background-color: #329F5B;
+}
+.left-section{
+  padding-right: 4vh;
+  display: flex;
+}
+.filter{
+  margin-right: 5vh;
+
+}
+h2{
+  color: black;
+  text-decoration: none;
+}
+h2:hover{
+ color: #2D3A3A;
+}
+label{
+  font-size: 2vh;
+  cursor: pointer;
+  color: black;
+  transition: color 0.2s ease-in-out;
+}
+.client-log{
+  margin-right: 5vh;
+}
+a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+label:hover{
+  color: white;
+}
