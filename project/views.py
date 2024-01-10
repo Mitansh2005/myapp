@@ -32,7 +32,6 @@ def excel_file_upload(request):
         data[10],
         data[11],
         data[12],
-        data[13],
       )
       value.save()
   return render(request,'upload.html')
