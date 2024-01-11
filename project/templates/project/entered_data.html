@@ -10,7 +10,6 @@
 {%block content%}
 <table>
   <tr>
-    <th>Sr.no</th>
     <th>Script name</th>
     <th>Client name</th>
     <th>Client code</th>
@@ -23,13 +22,15 @@
     <th>Sell quantity</th>
     <th>Sell amount</th>
     <th>Net quantity</th>
+    <th>Net Average</th>
+    <th>Net Amount</th>
     <th>Net profit</th>
+    <th>M2M</th>
     
   </tr>
   
     {%for scripts in account%}
     <tr>
-    <td>{{scripts.Id}}</td>
     <td>{{scripts.Script_Name}}</td>
     <td>{{scripts.Client_Name}}</td>
     <td>{{scripts.Client_Code}}</td>
@@ -42,8 +43,10 @@
     <td>{{scripts.Sell_Quantity}}</td>
     <td>{{scripts.Sell_Amount|floatformat:4}}</td>
     <td>{{scripts.Net_Quantity}}</td>
+    <td>{{scripts.Net_Avg|floatformat:4}}</td>
+    <td>{{scripts.Net_Amount|floatformat:4}}</td>
     <td>{{scripts.Net_Pl}}</td>
-   
+    <td>{{scripts.M2M|floatformat:3}}</td> 
   </tr>
     {%endfor%}
 

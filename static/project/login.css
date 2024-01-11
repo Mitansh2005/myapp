@@ -17,7 +17,7 @@ body {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 10px 10px 1px 0px;
-  transition: box-shadow 0.4s ease-in-out,border-left 0.4s ease-in-out,border-top 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-out ,border-left 0.4s ease-in-out,border-top 0.4s ease-in-out;
 }
 .form-container:hover{
   border-left: 10px solid#0C8346;

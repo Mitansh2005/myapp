@@ -12,20 +12,22 @@
   margin-right: 5vh;
 
 }
-h2{
+.logo{
   color: black;
   text-decoration: none;
+  text-align: center;
+  transition: color 0.2s ease-in-out;
 }
-h2:hover{
- color: #2D3A3A;
+.logo:hover{
+ color: #ffffff;
 }
-label{
+.client-log,.cmp-log,.upload{
   font-size: 2vh;
   cursor: pointer;
   color: black;
   transition: color 0.2s ease-in-out;
 }
-.client-log{
+.client-log,.cmp-log{
   margin-right: 5vh;
 }
 a{
@@ -36,6 +38,6 @@ a{
 }
 
 
-label:hover{
+.client-log:hover,.cmp-log:hover,.upload:hover{
   color: white;
 }

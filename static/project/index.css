@@ -42,10 +42,18 @@ svg{
   background: #8FD5A6;
   box-shadow: 20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
  }
-
- .Client_Log,.Upload_Excel,.View_Upload {
+.buttons-holder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+ .Client_Log,.Upload_Excel,.Cmp_Log {
   display: block;
   margin: 5vh;
+  margin-bottom: 1vh;
+  margin-top: 5vh;
   background-color: #ffffff00;
   color: #fff;
   width: 20vh;
@@ -56,12 +64,12 @@ svg{
   transition: all 0.6s ease;
 }
 
-.Client_Log:hover,.Upload_Excel:hover{
+.Client_Log:hover,.Upload_Excel:hover,.Cmp_Log:hover{
   background-color: #0D5D56;
   cursor: pointer;
 }
 
-.Client_Log svg,.Upload_Excel svg {
+.Client_Log svg,.Upload_Excel svg,.Cmp_Log svg {
   width: 1.6em;
   margin: -0.2em 0.8em 1em;
   position: absolute;
@@ -69,7 +77,7 @@ svg{
   transition: all 0.6s ease;
 }
 
-.Client_Log:hover svg,.Upload_Excel:hover svg {
+.Client_Log:hover svg,.Upload_Excel:hover svg,.Cmp_Log:hover svg {
   transform: translateX(5px);
   
 }

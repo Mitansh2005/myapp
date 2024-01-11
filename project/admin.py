@@ -11,7 +11,7 @@ from .models import daily_log
 # Register your models here.
 
 class daily_logAdmin(admin.ModelAdmin):
-  list_display= ('Id','Script_Name','Client_Name','Client_Code','Buy_Date','Buy_Rate','Buy_Quantity','Buy_Amount','Sell_Date','Sell_Rate','Sell_Quantity','Sell_Amount','Net_Quantity','Net_Pl')
+  list_display= ('Id','Script_Name','Client_Name','Client_Code','Buy_Date','Buy_Rate','Buy_Quantity','Buy_Amount','Sell_Date','Sell_Rate','Sell_Quantity','Sell_Amount','Net_Quantity','Net_Avg','Net_Amount','Cmp_Rate','Net_Pl','M2M')
   list_filter=('Id','Buy_Date','Sell_Date','Client_Code',("Buy_Date", DateRangeFilterBuilder()),
                 (
             "Sell_Date",

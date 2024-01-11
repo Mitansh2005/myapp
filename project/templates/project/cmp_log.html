@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block page_title%}Cmp Log{%endblock%}
+{%block css_files%}
+<link rel="stylesheet" href="{% static "project/cmp_log.css" %}">
+<link rel="stylesheet" href="{% static "project/entered_data.css" %}">
+{%endblock%}
+{%block content%}
+<div class="entire">
+<table class="cmp_table">
+  <tr>
+    <th>Script name</th>
+    <th>Cmp</th> 
+  </tr>
+{%for quant in nt%}
+<tr>
+  <td>{{quant.Script_Name}}</td>
+  <td class="Cmp_rate_cmp" contenteditable=True>{{quant.Cmp_Rate}}</td>
+</tr>
+{%endfor%}
+</table>
+<div class='enter_form'>
+  <form class="cmp_update_form" action="" method='POST'>
+    {% csrf_token %}
+    <h2 class="header_line">UPDATE CMP RATE</h2>
+    <label class="script_label">Enter the Script Name: </label>
+      <input type="text" class="field" placeholder="Enter the Script" name="Script_Name">
+    <label class="cmp_label">Enter the current market price:</label>
+    <input type="number" class="cmp_rate_input" placeholder="Enter the cmp" name="Cmp_Rate">
+    <button class="submitBtn" type="submit">Submit</button>
+  </form>
+</div>
+</div>
+
+
+{%endblock%}

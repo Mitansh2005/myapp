@@ -4,6 +4,7 @@
 html{
 font-family: 'roboto';
   font-weight: bold;
+  font-size: 2vh;
 }
 table {
   border-collapse: collapse;
