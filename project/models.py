@@ -13,12 +13,12 @@ class daily_log(models.Model):
   Sell_Rate=models.FloatField(default=0.0,null=True,blank=True)
   Sell_Quantity=models.IntegerField(default=0,null=True,blank=True)
   Sell_Amount=models.FloatField(default=0,null=True,editable=False,blank=True)
-  Net_Quantity=models.IntegerField(default=0,null=False,editable=False)
+  Net_Quantity=models.IntegerField(default=0,null=True,editable=False,blank=True)
   Net_Avg=models.FloatField(default=0.0,null=True,blank=True)
   Net_Amount=models.FloatField(default=0.0,null=True,blank=True)
   Cmp_Rate=models.FloatField(default=0.0,null=False,editable=True)
-  Net_Pl=models.FloatField(default=0.0,null=False,editable=False)
-  M2M=models.FloatField(default=0.0,null=False,blank=True)
+  Net_Pl=models.FloatField(default=0.0,null=True,editable=False)
+  M2M=models.FloatField(default=0.0,null=True,blank=True)
   class Meta:
     ordering=['Id']
   
@@ -32,9 +32,10 @@ class daily_log(models.Model):
     if self.Net_Quantity==0:
       self.Net_Avg=0
     else:
-      self.Net_Avg=(self.Buy_Amount-self.Sell_Amount)/self.Net_Quantity
+       self.Net_Avg=(self.Buy_Amount-self.Sell_Amount)/self.Net_Quantity
     self.Net_Amount=self.Buy_Amount-self.Sell_Amount
     self.M2M=(self.Cmp_Rate-self.Net_Avg)*self.Net_Quantity
+  
     super().save(*args,**kwargs)
   # def __str__(self):
   #   return f'{self.id} {self.Script_name} {self.Client_name} {self.Client_code} {self.Buy_date} {self.Buy_rate} {self.Buy_quantity} {self.Buy_amount} {self.Sell_date} {self.Sell_rate} {self.Sell_quantity} {self.Sell_amount}  '
