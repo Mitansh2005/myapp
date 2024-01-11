@@ -14,8 +14,8 @@
   </tr>
 {%for quant in nt%}
 <tr>
-  <td>{{quant.Script_Name}}</td>
-  <td class="Cmp_rate_cmp">{{quant.Cmp_Rate}}</td>
+  <td>{{quant.Script_Name|capfirst}}</td>
+  <td class="Cmp_rate_cmp">{{quant.Cmp_Rate|capfirst}}</td>
 </tr>
 {%endfor%}
 </table>

@@ -31,8 +31,8 @@
   
     {%for scripts in account%}
     <tr>
-    <td>{{scripts.Script_Name}}</td>
-    <td>{{scripts.Client_Name}}</td>
+    <td>{{scripts.Script_Name|capfirst}}</td>
+    <td>{{scripts.Client_Name|capfirst}}</td>
     <td>{{scripts.Client_Code}}</td>
     <td>{{scripts.Buy_Date}}</td>
     <td>{{scripts.Buy_Rate}}</td>
