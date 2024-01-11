@@ -1,25 +1,8 @@
-html{
-  font-family: 'roboto';
-  font-weight: bold;
-  font-size: large;
-}
-body {
-  --dot-bg: rgb(255, 255, 255);
-  --dot-color: #0C8346;
-  --dot-size: 1px;
-  --dot-space: 22px;
-	background:
-		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		var(--dot-color);
-}
-*{
-  margin: 0;
-}
+
 .head{
   display: flex;
   align-items: center;
-  background-color: #329F5B;
+
   padding: 2vh;
 }
 
@@ -29,61 +12,29 @@ svg{
 .content{
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 25vh;
+  justify-content:flex-start;
+  margin-top: 15vh;
 }
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50vh;
-  height: 40vh;
-  border-radius: 50px;
-  background: #8FD5A6;
-  box-shadow: 20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
- }
-.buttons-holder{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 3vh;
-}
- .Client_Log,.Upload_Excel,.Cmp_Log {
-  display: block;
-  margin: 5vh;
-  margin-bottom: 1vh;
-  margin-top: 5vh;
-  background-color: #ffffff00;
-  color: #fff;
-  width: 20vh;
-  height: 6vh;
-  border: #0D5D56 0.2em solid;
-  border-radius: 11px;
-  text-align: right;
-  transition: all 0.6s ease;
+.col-lg-8{
+  height: 65vh;
 }
 
-.Client_Log:hover,.Upload_Excel:hover,.Cmp_Log:hover{
-  background-color: #0D5D56;
-  cursor: pointer;
+.textContent{
+  max-width: 70vh;
+  margin-left: 25vh;
+
+}
+.heading1{
+  font-weight: 900;
 }
 
-.Client_Log svg,.Upload_Excel svg,.Cmp_Log svg {
-  width: 1.6em;
-  margin: -0.2em 0.8em 1em;
-  position: absolute;
-  display: flex;
-  transition: all 0.6s ease;
+.heading2{
+  font-weight: 900 bold;
+  color: #FC5130;
+  margin-bottom: 4vh;
 }
-
-.Client_Log:hover svg,.Upload_Excel:hover svg,.Cmp_Log:hover svg {
-  transform: translateX(5px);
-  
-}
-
-.text{
-  text-align: center;
-  margin: 0 1.5em;
-  margin-right:5px
+h3{
+  font-size: medium;
+  font-weight: 400;
+  color: black;
 }

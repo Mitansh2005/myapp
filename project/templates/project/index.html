@@ -3,46 +3,35 @@
 {% block  page_title %}Home Page{% endblock %}
 {%block css_files%}
 <link rel="stylesheet" href="{% static "project/index.css" %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 {%endblock%}
 {%block content%}
 <div class="entire-div">
   <div class="content">
-<div class="card">
-  <div class="buttons-holder">
-    <a href={%url 'data-page'%}>
-  <button class="Client_Log">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-    </svg>
-    <div class="text">
-     Client Log
-  
+    <div class="textContent">
+      <h1 class="heading1">Empower Your Investments:</h1>
+      <h1 class="heading2"> Personalized Portfolio Management Made Simple.</h1>
+      <h3>Experience the difference of bespoke portfolio management with a dedicated advisor by your side.
+        It's time to unlock the true potential of your investments with personalized portfolio management.
+      </h3>
     </div>
-  </button>
-</a>
-<a href={%url 'cmp-page'%}>
-  <button class="Cmp_Log">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-    </svg>
-    <div class="text">
-     Cmp Log
+    <div class="col-lg-8" id="animation container">
+      <script> 
+        let animation=bodymovin.loadAnimation({
+          container: document.getElementById('animation container'),
+          path:'{% static "project/Animation.json" %}',
+          render: 'svg',
+          loop: true,
+          autoplay: true,
+          name: 'home_animation'
+        });
+      </script>
     </div>
-  </button>
-</a>
-<a class="upload-link" href={%url 'upload-page'%}>
-  <button class="Upload_Excel">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-    </svg>
-    <div class="text">
-       Upload File
-    </div>
-  </button>
-</a>
-</div>
-</div>
+    
+    {% comment %} <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/a506bc79-4ae2-4b58-84a3-791c5125ab81/3ceDtgUaVv.json" background="#fff" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player> {% endcomment %}
   </div>
 </div>
-<script scr={% static "filter.js" %}></script>
 {%endblock%}

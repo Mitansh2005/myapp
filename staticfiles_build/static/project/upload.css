@@ -1,19 +1,8 @@
-body {
-  --dot-bg: rgb(255, 255, 255);
-  --dot-color: #0C8346;
-  --dot-size: 1px;
-  --dot-space: 22px;
-	background:
-		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		var(--dot-color);
-}
-
 .entire{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30vh;
+  margin-top: 22vh;
 }
 html{
   font-family: 'roboto';
@@ -32,7 +21,7 @@ html{
  .box::before {
   content: ' ';
   position: absolute;
-  top: 0;
+  top: -50px;
   left: 80px;
   width: 50%;
   height: 100%;
@@ -64,7 +53,7 @@ html{
  
  .box:before,
  .box:after {
-  background: linear-gradient(90deg, #000000, #cccccc)
+  background: linear-gradient(90deg, #FC5130, #30BCED)
  }
  
  .box span {
@@ -95,7 +84,7 @@ html{
  }
  
  .box span::before {
-  top: -40px;
+  top: -80px;
   left: 70px;
   width: 50px;
   height: 50px;
@@ -105,7 +94,7 @@ html{
  .box span::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   right: 0;
   width: 100%;
   height: 100%;
@@ -119,7 +108,7 @@ html{
  }
  
  .box span:after {
-  bottom: -40px;
+  bottom: 20px;
   right: 180px;
   width: 50px;
   height: 50px;
@@ -163,7 +152,7 @@ html{
  input[type=file]::file-selector-button {
   margin-right: 20px;
   border: none;
-  background: #820933;
+  background: #30BCED;
   padding: 10px 20px;
   border-radius: 10px;
   color: #fff;
@@ -172,12 +161,12 @@ html{
 }
 
 input[type=file]::file-selector-button:hover {
-  background: #71072c;
+  background: #0096cc;
 }
  .btn {
   margin-right: 20px;
   border: none;
-  background: #098227;
+  background: #FC5130;
   padding: 10px 20px;
   border-radius: 10px;
   color: #fff;
@@ -186,5 +175,5 @@ input[type=file]::file-selector-button:hover {
  }
  
  .btn:hover {
-  background: #077129;
+  background: #e52600;
  }

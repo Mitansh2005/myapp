@@ -1,8 +1,26 @@
+html{
+  font-family: 'roboto';
+  font-weight: bold;
+  font-size: large;
+}
+body {
+  --dot-bg: rgb(255, 255, 255);
+  --dot-color: #30BCED;
+  --dot-size: 1px;
+  --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+}
+*{
+  margin: 0;
+}
 .nav-bar{
   display: flex;
   align-items: center;
   justify-content:space-between;
-  background-color: #329F5B;
+  
 }
 .left-section{
   padding-right: 4vh;
@@ -12,20 +30,26 @@
   margin-right: 5vh;
 
 }
-.logo{
+.logo , .logo2{
   color: black;
   text-decoration: none;
   text-align: center;
   transition: color 0.2s ease-in-out;
 }
-.logo:hover{
- color: #ffffff;
+.logo2{
+  margin-left: 1vh;
+  color: #30BCED;
 }
+
 .client-log,.cmp-log,.upload{
   font-size: 2vh;
   cursor: pointer;
   color: black;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out ;
+}
+.client-log:hover,.cmp-log:hover,.upload:hover{
+  color: #FC5130;
+  text-decoration: underline 1.5px;
 }
 .client-log,.cmp-log{
   margin-right: 5vh;
@@ -38,6 +62,4 @@ a{
 }
 
 
-.client-log:hover,.cmp-log:hover,.upload:hover{
-  color: white;
-}
+
