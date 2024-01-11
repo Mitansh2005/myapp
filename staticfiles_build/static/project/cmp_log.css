@@ -1,0 +1,66 @@
+html{
+  font-family: 'roboto';
+}
+.entire{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.cmp_table{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 75vh;
+}
+td,th{
+  width: 40vh;
+}
+.button{
+  border: none;
+}
+.enterBtn{
+  border-radius:2px;
+  width: 20vh;
+  border: none;
+  background-color: rgb(41, 97, 41);
+  color: white;
+  padding: 1vh;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.cmp_update_form{
+  border: 4px solid rgb(12, 131, 70);
+  border-radius: 5px;
+  margin: 10vh;
+  padding: 1vh;
+  display: flex;
+  flex-direction: column;
+}
+.header_line{
+  margin-bottom: 10px;
+}
+.enter_form{
+  display: flex;
+  flex-direction: column;
+}
+.cmp_label,.script_label{
+  color: black;
+}
+input{
+  margin: 1vh;
+  padding: 1vh;
+}
+.submitBtn{
+  margin: auto;
+  margin-top: 1vh;
+  padding: 1.5vh;
+  border: none;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(203, 166, 34);
+  cursor: pointer;
+}
+.submitBtn:hover{
+  background-color: rgb(255, 203, 17)
+}
