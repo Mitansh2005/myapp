@@ -53,6 +53,8 @@ def Cmp_Entry(request):
     script=request.POST['Script_Name']
     cmp_rate=request.POST['Cmp_Rate']
     daily_log.objects.all().filter(Net_Quantity__gt=0,Script_Name=script).update(Cmp_Rate=cmp_rate)
+    return render(request)
+  else:
     net_quant=daily_log.objects.all().filter(Net_Quantity__gt=0)
     return render(request,'project/cmp_log.html',{
     'nt':net_quant
