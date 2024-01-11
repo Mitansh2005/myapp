@@ -10,10 +10,10 @@ class daily_log(models.Model):
   Buy_Quantity=models.IntegerField()
   Buy_Amount=models.FloatField(default="",null=False,editable=False)
   Sell_Date=models.DateField(default="",null=True,blank=True)
-  Sell_Rate=models.FloatField(default="0",null=True,blank=True)
-  Sell_Quantity=models.IntegerField(default="0",null=True,blank=True)
-  Sell_Amount=models.FloatField(default="0",null=True,editable=False,blank=True)
-  Net_Quantity=models.IntegerField(default="",null=False,editable=False)
+  Sell_Rate=models.FloatField(default=0.0,null=True,blank=True)
+  Sell_Quantity=models.IntegerField(default=0,null=True,blank=True)
+  Sell_Amount=models.FloatField(default=0,null=True,editable=False,blank=True)
+  Net_Quantity=models.IntegerField(default=0,null=False,editable=False)
   Net_Avg=models.FloatField(default=0.0,null=True,blank=True)
   Net_Amount=models.FloatField(default=0.0,null=True,blank=True)
   Cmp_Rate=models.FloatField(default=0.0,null=False,editable=True)
@@ -24,6 +24,7 @@ class daily_log(models.Model):
   
   
   def save(self,*args, **kwargs):
+    
     self.Buy_Amount=self.Buy_Rate*self.Buy_Quantity
     self.Sell_Amount=self.Sell_Rate*self.Sell_Quantity
     self.Net_Pl=(self.Sell_Quantity*self.Sell_Rate)-(self.Sell_Quantity*self.Buy_Rate)
