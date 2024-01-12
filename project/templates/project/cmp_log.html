@@ -23,10 +23,14 @@
   <form class="cmp_update_form" action="" method='POST'>
     {% csrf_token %}
     <h2 class="header_line">UPDATE CMP RATE</h2>
-    <label class="script_label">Enter the Script Name: </label>
-      <input type="text" class="field" placeholder="Enter the Script" name="Script_Name">
+    <label class="script_label">Select the Script Name: </label>
+    <select class="field" name="Script_Name">
+      {%for option in nt%}
+      <option value="{{option.Script_Name}}">{{option.Script_Name}}</option>
+      {%endfor%}
+    </select>
     <label class="cmp_label">Enter the current market price:</label>
-    <input type="number" class="cmp_rate_input" placeholder="Enter the cmp" name="Cmp_Rate">
+    <input type="number" class="cmp_rate_input" placeholder="Enter the cmp" name="Cmp_Rate" step="0.01">
     <button class="submitBtn" type="submit">Submit</button>
   </form>
 </div>

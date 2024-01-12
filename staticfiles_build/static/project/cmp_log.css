@@ -50,12 +50,13 @@ td,th{
 .cmp_label,.script_label{
   color: black;
 }
-input{
+input,select{
   margin: 1vh;
   padding: 1vh;
   width: 100%;
   outline: none;
 }
+
 .submitBtn{
   margin: auto;
   margin-top: 1vh;
@@ -63,9 +64,11 @@ input{
   border: none;
   border-radius: 5vh;
   color:#FC5130;
+  font-weight: 700;
   background-color: #050401;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 .submitBtn:hover{
-  background-color: #252524;
+  background-color: #ffffff;
 }

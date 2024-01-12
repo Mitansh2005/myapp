@@ -22,9 +22,9 @@ body {
   justify-content:space-between;
   
 }
-.left-section{
-  padding-right: 4vh;
+.mid-section{
   display: flex;
+  margin-right: 5vh;
 }
 .filter{
   margin-right: 5vh;
@@ -60,6 +60,3 @@ a{
   align-items: center;
   text-decoration: none;
 }
-
-
-
