@@ -50,7 +50,7 @@ td,th{
 .cmp_label,.script_label{
   color: black;
 }
-input,select{
+input, select{
   margin: 1vh;
   padding: 1vh;
   width: 100%;
