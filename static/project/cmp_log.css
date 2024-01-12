@@ -50,11 +50,14 @@ td,th{
 .cmp_label,.script_label{
   color: black;
 }
-input, select{
+input{
   margin: 1vh;
   padding: 1vh;
   width: 100%;
   outline: none;
+}
+select.field{
+  padding:1vh;
 }
 .submitBtn{
   margin: auto;
