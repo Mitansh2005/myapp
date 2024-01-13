@@ -11,10 +11,12 @@
   <div class="content">
     <form method="post" enctype="multipart/form-data">
       {% csrf_token %}
-      <input type="file" name="myfile">
+      <input type="file" name="myfile" required>
       <button class="btn" type="submit">Upload</button>
     </form>
   </div>
+
+
 </div>
 </div>
 {%endblock%}

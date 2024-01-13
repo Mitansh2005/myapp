@@ -177,3 +177,26 @@ input[type=file]::file-selector-button:hover {
  .btn:hover {
   background: #e52600;
  }
+.content{
+  display: flex;
+  flex-direction: column;
+}
+ .success-msg{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  display: flex;
+  align-items: center; 
+  font-weight: 300;
+  margin: 25px;
+  width: 440px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.success-msg {
+  color: #270;
+  background-color: #DFF2BF;
+}
+.success-msg img{
+  width: 2vh;
+  margin-right: 1vh;
+}

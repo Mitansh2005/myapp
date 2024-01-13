@@ -13,7 +13,7 @@ def excel_file_upload(request):
     new_daily_log=request.FILES['myfile']
 
     if not new_daily_log.name.endswith('xlsx'):
-      messages.info(request,'wrong format')
+      messages.info(request,'wrong format',extra_tags="wrong_alert")
       return render(request,'upload.html')
     
     imported_data=dataset.load(new_daily_log.read(),format='xlsx')
@@ -37,7 +37,6 @@ def excel_file_upload(request):
         data[15],
         data[16],
         data[17],
-
       )
       value.save()
   return render(request,'upload.html')
@@ -52,7 +51,11 @@ def Cmp_Entry(request):
   if request.method=='POST':
     script=request.POST['Script_Name']
     cmp_rate=request.POST['Cmp_Rate']
-    daily_log.objects.all().filter(Net_Quantity__gt=0,Script_Name=script).update(Cmp_Rate=cmp_rate)
+    object=daily_log.objects.all().filter(Script_Name=script,Net_Quantity__gt=0)
+    new_m2m=(float(cmp_rate)-object[0].Net_Avg)*object[0].Net_Quantity
+    daily_log.objects.all().filter(Script_Name=script,Net_Quantity__gt=0).update(M2M=new_m2m)
+    daily_log.objects.all().filter(Script_Name=script).update(Cmp_Rate=cmp_rate)
+
     update=daily_log.objects.all().filter(Net_Quantity__gt=0)
     return render(request,'project/cmp_log.html',{
       'nt':update
