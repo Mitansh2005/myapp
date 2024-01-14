@@ -8,6 +8,7 @@ from tablib import Dataset
 # Create your views here.
 
 def excel_file_upload(request):
+        
   if request.method=='POST':
     dataset=Dataset()
     new_daily_log=request.FILES['myfile']

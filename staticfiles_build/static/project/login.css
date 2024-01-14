@@ -20,7 +20,7 @@ body {
   box-shadow: 10px 10px 1px 0px;
   transition: box-shadow 0.4s ease-out ,border-left 0.4s ease-in-out,border-top 0.4s ease-in-out;
 }
-.form-container:hover{
+.form-container:focus{
   border-left: 1px solid #30BCED;
   border-top: 1px solid#30BCED;
   box-shadow: 0px 0px 0px 0px;
