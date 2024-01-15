@@ -23,6 +23,14 @@
   <form class="cmp_update_form" action="" method='POST'>
     {% csrf_token %}
     <h2 class="header_line">UPDATE CMP RATE</h2>
+    {%for message in messages%}
+    <div class="alert alert-success d-flex align-items-center" role="alert">
+      <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+      <div>
+       {{message}}
+      </div>
+    </div>
+    {%endfor%}
     <label class="script_label">Select the Script Name: </label>
     <select class="field" name="Script_Name">
       {%for option in nt%}

@@ -60,21 +60,26 @@ class daily_log(models.Model):
     else:
       self.Net_Pl=(self.Sell_Rate*self.Sell_Quantity)-(self.Buy_Rate*self.Sell_Quantity)
     #if statements for m2m
-    if self.Cmp_Rate==None:
-      self.Cmp_Rate=0
-      if self.Net_Quantity!=0:
-        self.M2M=(self.Cmp_Rate-self.Net_Avg)*self.Net_Quantity
-      else:
-        self.M2M=0
-    elif self.Net_Quantity==0:
-      self.Net_Avg=0
-      self.M2M=0
-    else: 
-      if self.Net_Avg==None:
-        self.Net_Avg=0
-      elif self.Net_Quantity==None:
-        self.Net_Quantity=0
-      self.M2M=(self.Cmp_Rate-self.Net_Avg)*self.Net_Quantity
+    # if self.Cmp_Rate==None:
+    #   self.Cmp_Rate=0
+    #   if self.Net_Quantity!=0:
+    #     self.M2M=(self.Cmp_Rate-self.Net_Avg)*self.Net_Quantity
+    #   else:
+    #     self.M2M=0
+    # elif self.Net_Quantity==0:
+    #   self.Net_Avg=0
+    #   self.M2M=0
+    # else: 
+    #   if self.Net_Avg==None:
+    #     self.Net_Avg=0
+    #   elif self.Net_Quantity==None:
+    #     self.Net_Quantity=0
+    #   self.M2M=(self.Cmp_Rate-self.Net_Avg)*self.Net_Quantity
+    if self.Cmp_Rate is None or self.Net_Avg is None or self.Net_Quantity is None:
+     return None
+
+ # Calculate M2M
+    self.M2M = (self.Cmp_Rate - self.Net_Avg) * self.Net_Quantity
     
     super().save(*args,**kwargs)
   # def __str__(self):

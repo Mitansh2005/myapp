@@ -53,10 +53,17 @@ def Cmp_Entry(request):
     script=request.POST['Script_Name']
     cmp_rate=request.POST['Cmp_Rate']
     object=daily_log.objects.all().filter(Script_Name=script,Net_Quantity__gt=0)
-    new_m2m=(float(cmp_rate)-object[0].Net_Avg)*object[0].Net_Quantity
-    daily_log.objects.all().filter(Script_Name=script,Net_Quantity__gt=0).update(M2M=new_m2m)
-    daily_log.objects.all().filter(Script_Name=script).update(Cmp_Rate=cmp_rate)
-
+    for log in object:
+      log.Cmp_Rate=float(cmp_rate)
+      log.save()
+    # total_return=object.count()
+    # n=0
+    # while n<total_return:
+    #   new_m2m=(float(cmp_rate)-(object[n].Net_Avg))*(object[n].Net_Quantity)
+    #   object[n].update(M2M=new_m2m)
+    #   n=n+1
+    # daily_log.objects.all().filter(Script_Name=script).update(Cmp_Rate=cmp_rate)
+    messages.success(request,"The cmp rate is updated")
     update=daily_log.objects.all().filter(Net_Quantity__gt=0)
     return render(request,'project/cmp_log.html',{
       'nt':update
